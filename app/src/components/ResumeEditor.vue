@@ -6,35 +6,36 @@
 </template>
 
 <script>
-  import marked from 'marked'
-  export default {
-    props: ['markdown', 'enableHtml'],
-    name: 'ResumeEditor',
-    computed: {
-      result: function () {
-        return this.enableHtml ? marked(this.markdown) : this.markdown
-      }
-    },
-    methods: {
-      goBottom: function () {
-        this.$refs.container.scrollTop = 100000
-      }
+import marked from 'marked'
+export default {
+  props: ['markdown', 'enableHtml'],
+  name: 'ResumeEditor',
+  computed: {
+    result: function () {
+      return this.enableHtml ? marked(this.markdown) : this.markdown
+    }
+  },
+  methods: {
+    goBottom: function () {
+      this.$refs.container.scrollTop = 100000
     }
   }
+}
 
 </script>
 
 <style scoped>
-  .htmlMode {
-    animation: flip 2s;
+.htmlMode {
+  animation: flip 2s;
+}
+
+@keyframes flip {
+  from {
+    opacity: 0;
   }
-  
-  @keyframes flip {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+
+  to {
+    opacity: 1;
   }
+}
 </style>

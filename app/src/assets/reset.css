@@ -7,7 +7,8 @@ html,body,#app{
   height:100%;
 }
 .resumeEditor {
-    background: url("~assets/timg.jpg") #fff no-repeat center bottom / auto auto;
+    background: url("../assets/达菲家族.jpeg") #fff repeat center / auto auto;
+    background-size: cover;
 }
 /**
  * webkit-scroll
