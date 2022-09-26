@@ -1,10 +1,11 @@
 <template>
     <div id="app">
+        <audio src="https://m701.music.126.net/20220926222723/cf4e634a0dd85bb9228c8b355671d395/jdyyaac/005e/0709/0e09/74a84c10980c85e693039c99c531f135.m4a" play="true" loop="true" autoplay="autoplay"/>
         <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
         <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
         <div id="box" style="text-align: center;">
             <transition name="mybox">
-                <img class="box" v-show="boxshow" src="./assets/达菲家族.jpeg"></img>
+                <img class="box" v-show="boxshow" src="./assets/loving.jpg"></img>
             </transition>
         </div>
         <el-button :style="display" type="primary" @click="togglebox">隐藏彩蛋</el-button>
